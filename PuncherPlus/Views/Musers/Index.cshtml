@@ -1,0 +1,61 @@
+﻿@model IEnumerable<PuncherPlus.Models.Muser>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<h1 class="text-black-50 text-center">Lista de Usuarios</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nick)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GivenName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FamilyName)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nick)
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GivenName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FamilyName)
+            </td>
+       
+            <td>
+                <a class="bi bi-filetype-pdf" id="PDF" href="javascript:PrintPDF(@item.Id)"> Pdf</a>|
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> |
+            
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<p>
+    <a asp-action="Create">Registrar Usuario</a>
+</p>
+
+<div id="divPaySlip">
+    <iframe id="ifrPaySlip" name="ifrPaySlip" scrolling="yes" style="display:none"></iframe>    
+</div>
+
+
+

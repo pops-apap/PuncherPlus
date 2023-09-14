@@ -1,0 +1,153 @@
+﻿@model PuncherPlus.Models.Dpointer
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = null;
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create">
+            <input type="hidden" name="Motivo" value="x"/>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+      
+
+            <div class="form-group">
+
+           
+                @*<label asp-for="Motivo" class="control-label"></label>*@
+          @*      <select  asp-for="Motivo" class="form-control">
+                    <option>startday</option>
+                    <option>almuerzo</option>
+                    <option>break</option>                    
+                </select><br />*@
+                <input asp-for="MotivoDetalle" class="form-control" />
+                <input asp-for="Motivo" class="form-control" />
+
+               @* <span asp-validation-for="Motivo" class="text-danger"></span>*@
+            </div>
+      
+            <div class="form-group">           
+                <label for="Usuario"> Usuario</label><br>
+                <select id="miSelect" class="form-control"></select>
+                <span asp-validation-for="IdUser" class="text-danger"></span>
+            </div>
+            <br />
+        </form>
+
+    </div>
+</div>
+
+@*<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+<br />
+<br>
+<br>*@
+
+
+
+<input type="button" class="btn btn-primary" name="boton01" id="boton01" value="Guardar">
+<br>
+
+<script>
+    var fnConvertDataToJson = function (result) {
+        if (result.ok) {
+            return result.json();
+        }
+
+    };
+    var url = "https://localhost:7013/Dpointers/GetAllUser";
+    var valorid;
+    fetch(url)
+        .then(fnConvertDataToJson)
+        .then(function (data) {
+        data.forEach(function (element) {
+            let miSelect = document.getElementById("miSelect");
+            let opt = document.createElement("option");
+            //let valuemiSelect = miSelect.value;
+            opt.appendChild(document.createTextNode(element.givenName + " "));
+            opt.appendChild(document.createTextNode(element.familyName));
+            opt.value = element.id;
+            //var test = document.getElementById("miSelect").innerText = ' Usted selecciono al cliente ${elemet.id}.';
+            miSelect.appendChild(opt);
+            //console.log(element.id, element.nombre,element.apellido)
+            var valorid = element.id
+            //console.log(element.id)
+        })
+    })
+</script>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#boton01").click(function () {
+
+            var valoridd = ($("#miSelect").val());
+            //console.log(valoridd);         
+            var CreateAt = ($("#CreateAt").val());
+            var Motivo = ($("#Motivo").val()) +","+ ($("#MotivoDetalle").val());
+            //var MotivoDetalle = ($("#MotivoDetalle").val());
+            var pointerType = ($("#pointerType").val());
+            var BodyJson = '{"IdUser":' + valoridd + ',"Motivo": "' + Motivo + '"}';
+            var gfg = JSON.stringify(BodyJson);
+            console.log(BodyJson);
+            $.ajax({
+                "url": "https://localhost:7013/Dpointers/Create",
+                "method": "POST",
+
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "data": BodyJson,
+                "success": function (data) {
+                    $("#formModal").modal('hide');
+
+                    $.alert({
+                        title: 'Listo!',
+                        content: 'Puncher  Registrado!',
+                    });
+
+                    setInterval(()=>{
+                        window.location.reload();
+                    }, 1500);
+                },
+                "error": function (data) {
+                    console.log("error", data);
+                }
+
+            });
+        })
+    })
+    
+;
+</script>
+@*
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>*@
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+
+
+
+
+
+                
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+﻿@model IEnumerable<PuncherPlus.Models.tablaDpointer>
+@{
+    Layout = "";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />  
+</head>
+<body onload="window.print()">
+
+    <center>
+<h1>    Reporte de registros @ViewBag.nickName ultimo año</h1>
+
+<br>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nick)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pointerType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreateAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Motivo)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nick)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.pointerType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreateAt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Motivo)
+                </td>
+
+                <td>
+                 @*<a asp-action="Edit" asp-route-id="@item.Id" class="btn  btn-primary">Edit</a>
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>*@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table> 
+
+</center>
+</body>
+</html>

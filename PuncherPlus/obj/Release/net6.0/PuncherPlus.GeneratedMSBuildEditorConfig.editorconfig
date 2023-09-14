@@ -1,0 +1,89 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PuncherPlus
+build_property.RootNamespace = PuncherPlus
+build_property.ProjectDir = C:\dg\PuncherPlus\PuncherPlus\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = C:\dg\PuncherPlus\PuncherPlus
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/dg/PuncherPlus/PuncherPlus/Views/Dpointers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHBvaW50ZXJzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dg/PuncherPlus/PuncherPlus/Views/Dpointers/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHBvaW50ZXJzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dg/PuncherPlus/PuncherPlus/Views/Dpointers/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHBvaW50ZXJzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dg/PuncherPlus/PuncherPlus/Views/Dpointers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHBvaW50ZXJzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dg/PuncherPlus/PuncherPlus/Views/Dpointers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHBvaW50ZXJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dg/PuncherPlus/PuncherPlus/Views/Dpointers/printTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHBvaW50ZXJzXHByaW50VGFibGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dg/PuncherPlus/PuncherPlus/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dg/PuncherPlus/PuncherPlus/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dg/PuncherPlus/PuncherPlus/Views/Musers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVzZXJzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dg/PuncherPlus/PuncherPlus/Views/Musers/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVzZXJzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dg/PuncherPlus/PuncherPlus/Views/Musers/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVzZXJzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dg/PuncherPlus/PuncherPlus/Views/Musers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVzZXJzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dg/PuncherPlus/PuncherPlus/Views/Musers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVzZXJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dg/PuncherPlus/PuncherPlus/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dg/PuncherPlus/PuncherPlus/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dg/PuncherPlus/PuncherPlus/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dg/PuncherPlus/PuncherPlus/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/dg/PuncherPlus/PuncherPlus/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-9ekto2os1w

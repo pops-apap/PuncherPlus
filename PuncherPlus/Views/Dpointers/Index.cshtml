@@ -1,0 +1,104 @@
+﻿@model IEnumerable<PuncherPlus.Models.tablaDpointer>
+
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-center text-black-50 "><i></i>PuncherList</h1>
+<script type="text/javascript">  
+showInPopup = (url, title) => {
+
+    $.ajax({
+        type: 'GET',
+        url: url,
+        success: function (res) {
+            //console.log(res);
+            $(".modal-body").html(res);
+            $(".modal-title").html(title);
+            $("#formModal").modal('show');
+            
+        },
+        failure: function (response) {
+            alert(response.responseText);
+        },
+        error: function (response) {
+            console.log(response);
+            alert("error");
+        }
+    })
+};
+</script>
+
+<p>
+    <a onclick="showInPopup('@Url.Action("Create","Dpointers",null,Context.Request.Scheme)','PUNCH')" 
+        class="btn btn-success text-white"><i class="fas fade"></i> PUNCH</a>
+</p>
+
+
+
+<table class="table">
+    <thead>  
+        <tr>
+            <th>                
+                @Html.DisplayNameFor(model => model.Nick)
+            </th>
+            <th >
+                @Html.DisplayNameFor(model => model.pointerType)                
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreateAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Motivo)
+            </th>
+            <th >
+                @Html.DisplayNameFor(model => model.latepunch )
+            </th>
+     
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) { 
+
+           
+            string style = item.latepunch == "si" ? "background-color:yellow" : "";
+        <tr>
+            <td > 
+                @Html.DisplayFor(FormodelItem => item.Nick)
+            </td>
+
+            <td>                
+                @Html.DisplayFor(modelItem => item.pointerType)
+            </td>
+
+            <td style="@style">
+                @Html.DisplayFor(modelItem => item.CreateAt)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Motivo)
+            </td>
+
+                <td style="@style">
+                    @Html.DisplayFor(modelItem => item.latepunch)
+             </td>
+                
+            <td>
+@*                <a asp-action="Edit" asp-route-id="@item.Id" class="btn  btn-primary">Edit</a> 
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>*@
+            </td>
+        </tr>}
+    </tbody>
+</table>
+        @*<form asp-controller="Dpointers" asp-action="Index">
+                <p>
+                    IdUser: <input type="text" name="buscar" class="form-text" />
+                    <input type="submit" value="buscar" class="btn btn-sm btn-dark" />
+                </p>
+        </form>*@
+
+
