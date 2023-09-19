@@ -1,0 +1,5 @@
+2023-01-16T18:40:15.221865Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+2023-01-16T18:40:15.221893Z 0 [System] [MY-013169] [Server] c:\wamp64\bin\mysql\mysql8.0.31\bin\mysqld.exe (mysqld 8.0.31) initializing of server in progress as process 25324
+2023-01-16T18:40:15.251380Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2023-01-16T18:40:17.193275Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2023-01-16T18:40:18.496185Z 6 [Warning] [MY-010453] [Server] root@localhost is created with an empty password ! Please consider switching off the --initialize-insecure option.
